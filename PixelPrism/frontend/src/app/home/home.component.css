@@ -1,0 +1,137 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  background-color: #f9f5ff; /* Light purple background */
+  min-height: 100vh;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #6e45e2 0%, #88d3ce 100%);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(106, 76, 219, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(106, 76, 219, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(106, 76, 219, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(106, 76, 219, 0.2);
+}
+
+.feature-card h2 {
+  color: #5a2e98;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-card h2::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to right, #8a2be2, #6a4cdb);
+  border-radius: 50%;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(106, 76, 219, 0.1);
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #8a2be2, #6a4cdb);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(138, 43, 226, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+}
+
+.secondary {
+  background: white;
+  color: #6a4cdb;
+  border: 2px solid #6a4cdb;
+  box-shadow: 0 4px 10px rgba(106, 76, 219, 0.2);
+}
+
+.secondary:hover {
+  background: rgba(106, 76, 219, 0.05);
+}

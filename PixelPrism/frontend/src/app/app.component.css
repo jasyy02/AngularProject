@@ -1,0 +1,51 @@
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(106, 76, 219, 0.3);
+}
+
+nav ul li a:hover {
+  background: rgba(106, 76, 219, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(106, 76, 219, 0.3);
+}
+
+nav ul li a.active {
+  background: linear-gradient(to right, #8a2be2, #6a4cdb);
+  box-shadow: 0 4px 15px rgba(106, 76, 219, 0.4);
+  font-weight: 600;
+}
+
+nav ul li a.logout:hover {
+  background: rgba(255, 56, 96, 0.3);
+  box-shadow: 0 4px 8px rgba(255, 56, 96, 0.3);
+}

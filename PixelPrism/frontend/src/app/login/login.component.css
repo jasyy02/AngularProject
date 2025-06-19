@@ -1,0 +1,177 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e45e2 0%, #88d3ce 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-form {
+  width: 340px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.login-form::before {
+  content: 'Welcome Back!';
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #5a2e98;
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.login-form::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #8a2be2, #6a4cdb);
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.login-form div {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #5a2e98;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(106, 76, 219, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #6a4cdb;
+  box-shadow: 0 0 0 3px rgba(106, 76, 219, 0.2);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #8a2be2, #6a4cdb);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(106, 76, 219, 0.4);
+  margin-top: 10px;
+}
+
+.login-form button:hover {
+  background: linear-gradient(to right, #6a4cdb, #8a2be2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 76, 219, 0.6);
+}
+
+.login-form button:active {
+  transform: translateY(0);
+}
+
+.token-info {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  color: #5a2e98;
+  font-size: 14px;
+  word-break: break-all;
+  border-left: 4px solid #8a2be2;
+}
+
+.error-message {
+  color: #ff3860;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255, 56, 96, 0.1);
+  border-radius: 8px;
+  font-size: 14px;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+/* Floating animation for the container */
+.container::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(138, 43, 226, 0.1);
+  top: 20%;
+  left: 10%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(106, 76, 219, 0.1);
+  bottom: 15%;
+  right: 10%;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(10px); }
+}
+
+/* Additional decorative elements */
+.login-form:hover::before {
+  animation: textPulse 2s infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
