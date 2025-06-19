@@ -1,0 +1,35 @@
+name: Backend CI
+
+on:
+  push:
+    paths:
+      - 'backend/**'
+  pull_request:
+    paths:
+      - 'backend/**'
+
+jobs:
+  backend-build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Configure Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+    
+    # Installe les dépendances
+    - name: Install dependencies
+      working-directory: ./backend
+      run: npm install
+      
+
+  
+    
+    - name: Build Backend Docker Image
+      run: docker build -t backend-container ./backend
