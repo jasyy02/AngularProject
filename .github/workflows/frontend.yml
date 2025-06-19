@@ -52,4 +52,4 @@ jobs:
       
     # Vérifier que l'application démarre correctement dans un environnement Docker
     - name: Test Docker image
-      run: docker run -p 3000:3000 frontend-container
+      run: docker run -p 80:80 frontend-container
